@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "body {
+    font-family: 'Raleway' sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 0;
+    color: red ;
+    background-image: linear-gradient(180deg, rgba(15, 15, 15, .6), rgba(15, 15,
+    15, 1)), url(https://i.imgur.com/hDWuj4r.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: "Poetsen One", sans-serif;
+
+}
+body::-webkit-scrollbar-track{
+    background-color: #ffff;
+  }
+body::-webkit-scrollbar{
+    width: 10px;
+  }
+  body::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(-45deg, #aea5ff, #b2c0ff);
+    border-radius: 50px;
+  }
+.container{
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    flex-direction: column;
+    gap: 70px;
+}
+.profiles {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+
+}
+.profileavt{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 7px;
+    height: 100%;
+}
+.profileavt span {
+    color: rgb(231, 231, 231);
+    font-weight: lighter;
+    font-size: 14px;
+    padding-top: 4px;
+}
+.profileavt .trash_thing span {
+    padding-top: 4px;
+    font-size: 24px;
+    font-weight: 400;
+    color:#f00;
+}
+
+
+
+#profile_icon {
+color: rgb(77, 184, 77);
+    padding-top: 4px;
+}
+.profileavt .trash_thing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+.profile_avt_border {
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    border: rgb(0, 162, 255) 4px solid;
+    border-radius: 50%;
+}
+.container .profiles img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.contents {
+    text-align: center;
+    width: 40%;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr ;
+    row-gap: 40px;
+}
+.contents_information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media only screen and (max-width: 1800px) {
+    .contents {
+        text-align: center;
+        width: 40%;
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        row-gap: 40px;
+    }
+    }
+.contents_information .badges{
+    font-size: 24px;
+    font-weight: bold;
+    background: #FFFFFF;
+    background: linear-gradient(to bottom, #FFFFFF 0%, blue 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.contents_information span {
+    display: block;
+    color: rgb(226, 226, 226);
+    font-weight: lighter;
+    font-size: 14px;
+    width: 70%;
+    
+}
+.ko_biet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-wrap: nowrap;
+    gap: 20px;
+    width: 100%;
+}
+.aboutme{
+    width: 50%;
+    text-align: center;
+}
+.ko_biet span{
+    width: 24%;
+    border-radius: 50%;
+    height: 4px;
+    border: rgba(255, 255, 255, 0.2) 1px solid;
+}
+.ko_biet .ko_biet_title {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.about{
+    width: 10%;
+    height: 100%;
+}
+.cards{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap:50px;
+    cursor: pointer;
+
+    
+
+}
+@media only screen and (max-width: 800px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+.card{
+    transition: all .2s ease-out;
+    width: 360px;
+    height: 180px;
+    border-radius: 8px;
+    position: relative;
+   
+}
+.card .card_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+card .card_information{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .5), rgba(0, 0, 0, .8));
+
+}
+.card .name {
+    color: rgb(182, 182, 182);
+    font-size: 14px;
+
+}
+.card:hover{
+    animation-name: glow;
+    animation-duration: 1s;
+    outline: 1px solid rgb(141, 141, 141);
+    outline-offset: 15px;
+
+}
+@keyframes scale {
+    0%{
+    scale:1;
+    }
+    100%
+    {scale: 1.1;}
+
+  }
+  @keyframes glow {
+    0% {
+        box-shadow: 0px 0px 00px rgba(225, 184, 0, 0);
+    }
+    10% {
+        box-shadow: 0px 0px 100px rgba(36, 149, 255, 0.5);
+        filter: brightness(1.2);
+        transform: scale(1.02);
+    }
+    50% {
+        box-shadow: 0px 0px 50px rgba(21, 145, 247, 0.2);
+        filter: brightness(1);
+        transform: scale(1);
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.end {
+    padding: 100px 0px 50px 0px;
+    opacity: .9;
+    display: flex;
+    gap:5px;
+    align-items: center;
+}
+
