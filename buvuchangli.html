@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qtheprofile.dev</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#ffccff;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #ff0000;
+            color: #33fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .notification {
+            display: none;
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 25px;
+            background: #FFFF;
+            border: 5px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 10000;
+        }
+        .notification button {
+            margin: 5 5px;
+            padding: 10px;
+            background: #ff0000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .notification button.cancel {
+            background: #6c757d;
+        }
+        .profile {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+        }
+        .profile h1 {
+            margin: 10px 0;
+        }
+        .profile p {
+            margin: 5px 0;
+        }
+        .whereabouts {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .whereabouts p {
+            font-size: 16px;
+        }
+        .introduction {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .introduction p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .tabs button {
+            padding: 10px;
+            background: #ff0000;
+            color: #22222;
+            border: none;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .tabs button.active {
+            background: ##ff0000;
+        }
+        .content {
+            display: none;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .content img {
+            max-width: 150px;
+            margin: 10px;
+        }
+        .links {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .links a {
+            margin: 0 10px;
+        }
+        .links img {
+            width: 40px;
+            height: 40px;
+        }
+        footer {
+            background: #ff0000;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pờ gồ phai</h1>
+    </header>
+
+    <div class="container">
+        <div class="notification" id="notification">
+           <p>Xin chào! cảm ơn vì bạn đã quan tâm và  ghé qua .</p>
+            <button onclick="hideNotification()">hehe </button>
+            <button class="cancel" onclick="hideNotification()">Không có gì</button>
+        </div>
+
+        <div class="profile">
+            <img
+            src="https://i.imgur.com/KoIJRZs.png"
+            alt="Avatar">
+            <h1> Hello,I'm qtheabcxyz </h1>
+            <p><strong>🔴 Không muốn bị làm phiền</strong> </p>
+        </div>
+
+        <div class="whereabouts">
+            <p><strong>🗺️ Lào Cai ,Việt Nam </strong> </p>
+        </div>
+
+        <div class="introduction">
+            <p><strong>Introduce:</strong> Xin chào mọi người mình là Thế
+            (14/3/200x), là một học sinh bình thường .Và hiện tại mình là một dev tự,đang rất bí idea.</p>
+        </div>
+
+        <div class="tabs">
+            <button onclick="showContent('about')" class="active">About📝</button>
+            <button onclick="showContent('Interest')">Interest™️</button>
+            <button onclick="showContent('games')">Games🎮</button>
+            <button onclick="showContent('projects')">Projects💡</button>
+        </div>
+
+        <div id="about" class="content" style="display: block;">
+            <h2>•About.</h2>
+            <img
+            src="https://i.imgur.com/3iYCS1C.gif"
+            alt="About">
+            <p>Và trang này tạo
+            với mục đích gì?đây là lơi mình giới thiệu bản thân và những thứ
+          khác.Đây cũng là nơi mình tạo kết nối chia sẻ thông tin và ý kiến với
+          cộng đồng.Hy vọng tương lai bạn hiểu thêm về tôi hơn.[Nếu có ảnh dead
+          hay lỗi gì xin hãy ib dms với tôi]</p>
+        </div>
+        <div id="Interest" class="content">
+            <h2>Interest</h2>
+            <img
+            src="https://i.imgur.com/fTF3Bhk.gif"
+            alt="Skills">
+            <p>Ngay đây rồi,tôi thích đọc Light Novel và một ít MG/MH,một chút
+            gamer để xả stres,chỉ vậy thôi.(bí idea)</p>
+        </div>
+        <div id="games" class="content">
+            <h2>Games</h2>
+            <img
+            src="https://i.imgur.com/IBTsHQX.jpeg"
+            alt="Games">
+            <p>Mình chơi Punishing: Gray Raven|Wuthering Waves|Genshin
+            Impact|Honkai: Star Rail|Minecraft .Ngoài Wuthering Waves thì hiện
+            tại tựa game khác rất ít động tới.</p>
+        </div>
+        <div id="projects" class="content">
+            <h2>Projects</h2>
+            <img
+            src="https://i.imgur.com/r8S6aWr.gif"
+            alt="Projects">
+            <p>Tất cả ở trên Github của mình..</p>
+        </div>
+
+        <div class="links">
+            <a href=YTB target="_blank"><img
+            src="https://i.imgur.com/cYO7MrH.png"
+            alt="YTB" title="Tất cả về mình"></a>
+            <a href="https://discord.com/channels/@me" target="_blank"><img
+            src="https://i.imgur.com/fm2FAwQ.png"
+            alt="Discord" title="Tất cả về mình"></a>
+            <a href="https://github.com" target="_blank"><img
+            src="https://cdn.discordapp.com/attachments/1279353500257746976/1280433424963862528/PicTrim_202491_171856.png?ex=66d8100d&is=66d6be8d&hm=38e7f98c74e26a64bc809184975eaa8ae9c2884f3c1ae4db029b5514e0f63995&"
+            "alt="GitHub" title="Tất cả về mình"></a>
+            <a
+            href="https://mail.google.com/mail/mu/mp/101/#tl/priority/%5Esmartlabel_personal"
+            target="_blank"><img
+            src="https://i.imgur.com/yOpn5U3.png"=66d6c092&is=66d56f12&hm=1b2ef13c6109e87b721011f96213c9884bb836ec39a61cef18fb0dc62666ea73&"
+            alt="Gmail" title="Tất cả về mình"></a>
+        </div>
+    </div>
+
+    <footer>
+        <p>2024 © Made by qthe with HTML|JS| CSS.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('notification').style.display = 'block';
+        });
+
+        function hideNotification() {
+            document.getElementById('notification').style.display = 'none';
+        }
+
+        function showContent(id) {
+            var contents = document.querySelectorAll('.content');
+            var buttons = document.querySelectorAll('.tabs button');
+
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+            buttons.forEach(function(button) {
+                button.classList.remove('active');
+            });
+
+            document.getElementById(id).style.display = 'block';
+            document.querySelector(`[onclick="showContent('${id}')"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
